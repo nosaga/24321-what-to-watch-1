@@ -355,7 +355,7 @@ const MainScreen = (props) => {
 };
 
 MainScreen.propTypes = {
-  filmName: PropTypes.array.isRequired
+  filmName: PropTypes.string.isRequired
 };
 
 export default MainScreen;

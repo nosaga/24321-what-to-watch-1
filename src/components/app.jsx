@@ -10,7 +10,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  filmName: PropTypes.array.isRequired
+  filmName: PropTypes.string.isRequired
 };
 
 export default App;
