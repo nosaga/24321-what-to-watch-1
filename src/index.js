@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/app.jsx";
+import MainScreen from "./components/main-screen/main-screen.jsx";
 import {getRandom} from "./helpers/helpers";
 
 const init = () => {
@@ -8,7 +8,7 @@ const init = () => {
     filmName: [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`]
   }
   ReactDOM.render(
-      <App filmName = {settings.filmName[getRandom(3)]}/>,
+      <MainScreen filmName = {settings.filmName[getRandom(3)]}/>,
       document.querySelector(`#root`)
   );
 };
