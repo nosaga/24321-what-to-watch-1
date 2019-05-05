@@ -16,4 +16,4 @@ describe(`MainScreenComponent`, () => {
     titleLink.simulate(`click`);
     expect(clickHandler).toHaveBeenCalledTimes(1);
   });
-})
+});

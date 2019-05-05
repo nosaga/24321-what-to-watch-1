@@ -6,7 +6,7 @@ import {getRandom} from "./helpers/helpers";
 const init = () => {
   const settings = {
     filmName: [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`]
-  }
+  };
   ReactDOM.render(
       <MainScreen filmName = {settings.filmName[getRandom(3)]}/>,
       document.querySelector(`#root`)
@@ -14,3 +14,4 @@ const init = () => {
 };
 
 init();
+
