@@ -389,9 +389,39 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt=""
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/bohemian-rhapsody.jpg"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              The Grand Budapest Hotel
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+        >
+          <button
+            className="small-movie-card__play-btn"
+            type="button"
+          >
+            Play
+          </button>
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt=""
+              height="175"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -419,7 +449,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Bohemian Rhapsody"
+              alt=""
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -449,9 +479,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Macbeth"
+              alt=""
               height="175"
-              src="img/macbeth.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -479,9 +509,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Aviator"
+              alt=""
               height="175"
-              src="img/aviator.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -509,9 +539,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="We need to talk about Kevin"
+              alt=""
               height="175"
-              src="img/we-need-to-talk-about-kevin.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -539,9 +569,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="What We Do in the Shadows"
+              alt=""
               height="175"
-              src="img/what-we-do-in-the-shadows.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -569,9 +599,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Revenant"
+              alt=""
               height="175"
-              src="img/revenant.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -599,9 +629,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Johnny English"
+              alt=""
               height="175"
-              src="img/johnny-english.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -629,9 +659,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Shutter Island"
+              alt=""
               height="175"
-              src="img/shutter-island.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -659,9 +689,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Pulp Fiction"
+              alt=""
               height="175"
-              src="img/pulp-fiction.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -689,9 +719,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="No Country for Old Men"
+              alt=""
               height="175"
-              src="img/no-country-for-old-men.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -719,9 +749,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Snatch"
+              alt=""
               height="175"
-              src="img/snatch.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -749,9 +779,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Moonrise Kingdom"
+              alt=""
               height="175"
-              src="img/moonrise-kingdom.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -779,9 +809,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Seven Years in Tibet"
+              alt=""
               height="175"
-              src="img/seven-years-in-tibet.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -809,9 +839,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Midnight Special"
+              alt=""
               height="175"
-              src="img/midnight-special.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -839,9 +869,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="War of the Worlds"
+              alt=""
               height="175"
-              src="img/war-of-the-worlds.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -869,9 +899,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Dardjeeling Limited"
+              alt=""
               height="175"
-              src="img/dardjeeling-limited.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -899,9 +929,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Orlando"
+              alt=""
               height="175"
-              src="img/orlando.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -929,9 +959,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="Mindhunter"
+              alt=""
               height="175"
-              src="img/mindhunter.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width="280"
             />
           </div>
@@ -943,36 +973,6 @@ exports[`MainScreen renders correctly 1`] = `
               href="movie-page.html"
             >
               Mindhunter
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Midnight Special"
-              height="175"
-              src="img/midnight-special.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              Midnight Special
             </a>
           </h3>
         </article>

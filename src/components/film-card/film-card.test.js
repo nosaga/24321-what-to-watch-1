@@ -1,11 +1,11 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MainScreen from "./main-screen.jsx";
+import FilmCard from "./film-card.jsx";
 
-it(`MainScreen renders correctly`, () => {
+it(`FilmCard renders correctly`, () => {
   const tree = renderer
-    .create(<MainScreen
-      filmTitle = {``}
+    .create(<FilmCard
+      onClick = {jest.fn()}
     />)
     .toJSON();
 
