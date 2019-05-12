@@ -1,16 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/app.jsx";
+import MainScreen from "./components/main-screen/main-screen.jsx";
+import filmCards from "./data/films-cards.js";
 import {getRandom} from "./helpers/helpers";
 
 const init = () => {
-  const settings = {
-    filmName: [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`]
-  }
   ReactDOM.render(
-      <App filmName = {settings.filmName[getRandom(3)]}/>,
+      <MainScreen filmTitle = {filmCards[getRandom(20)]}/>,
       document.querySelector(`#root`)
   );
 };
 
 init();
+
