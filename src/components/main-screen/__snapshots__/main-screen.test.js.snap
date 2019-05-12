@@ -389,7 +389,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -419,7 +419,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -432,7 +432,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Fantastic Beasts: The Crimes of Grindelwald
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -449,7 +449,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -462,7 +462,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Bohemian Rhapsody
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -479,7 +479,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -492,7 +492,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Macbeth
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -509,7 +509,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -522,7 +522,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Aviator
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -539,7 +539,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -552,7 +552,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              We need to talk about Kevin
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -569,7 +569,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -582,7 +582,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              What We Do in the Shadows
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -599,7 +599,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -612,7 +612,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Revenant
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -629,7 +629,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -642,7 +642,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Johnny English
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -659,7 +659,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -672,7 +672,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Shutter Island
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -689,7 +689,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -702,7 +702,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Pulp Fiction
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -719,7 +719,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -732,7 +732,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              No Country for Old Men
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -749,7 +749,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -762,7 +762,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Snatch
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -779,7 +779,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -792,7 +792,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Moonrise Kingdom
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -809,7 +809,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -822,7 +822,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Seven Years in Tibet
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -839,7 +839,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -852,7 +852,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Midnight Special
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -869,7 +869,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -882,7 +882,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              War of the Worlds
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -899,7 +899,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -912,7 +912,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Dardjeeling Limited
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -929,7 +929,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -942,7 +942,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Orlando
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
@@ -959,7 +959,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt=""
+              alt="The Grand Budapest Hotel"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -972,7 +972,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Mindhunter
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
