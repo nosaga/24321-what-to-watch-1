@@ -19,9 +19,9 @@ const Card = ({onClick, onPlay, link, src, title}) => {
 Card.propTypes = {
   onClick: PropTypes.func,
   onPlay: PropTypes.func,
+  link: PropTypes.string,
   src: PropTypes.string,
-  title: PropTypes.string,
-  link: PropTypes.string
+  title: PropTypes.string
 };
 
 export default Card;

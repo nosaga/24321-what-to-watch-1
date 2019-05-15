@@ -119,14 +119,7 @@ class MainScreen extends Component {
               </li>
             </ul>
             <div className="catalog__movies-list">
-              {films.map((film, i) =>
-                <FilmList key={i}
-                  title={film.title}
-                  link={film.link}
-                  src={film.src}
-                  onClick={film.onClick}
-                  onPlay={film.onPlay}
-                />)}
+              <FilmList films = {films}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>

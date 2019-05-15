@@ -18,13 +18,26 @@ describe(`FilmCardComponent`, () => {
     const {films} = mock;
     const clickHandler = jest.fn();
     const app = shallow(<Card
+      films={films}
       onClick={clickHandler}
       onPlay={clickHandler}
-      films={films}
     />);
 
     const titleLink = app.find(`.small-movie-card__link`);
     titleLink.simulate(`click`);
     expect(clickHandler).toHaveBeenCalledTimes(1);
+  });
+  it(`Play button calls callback function`, () => {
+    const {films} = mock;
+    const clickHandler = jest.fn();
+    const app = shallow(<Card
+      films={films}
+      onClick={clickHandler}
+      onPlay={clickHandler}
+    />);
+
+    const button = app.find(`button`);
+    button.simulate(`click`);
+    app.update();
   });
 });

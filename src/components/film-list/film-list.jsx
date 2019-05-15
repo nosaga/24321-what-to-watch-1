@@ -1,27 +1,42 @@
-import React from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
 import Card from "../card/card.jsx";
 
-const FilmList = (props) => {
-  return (
-    <Card
-      title={props.title}
-      link={props.link}
-      src={props.src}
-      onClick={props.onClick}
-      onPlay={props.onPlay}
-    />
-  );
-};
+class FilmList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isActive: true};
+  }
+
+  handleClick() {
+    this.setState((state) => ({
+      isActive: !state.isActive
+    }));
+  }
+
+  render() {
+    const {films} = this.props;
+    return (
+      films.map((film, i) =>
+        <Card key={i}
+          link={film.link}
+          src={film.src}
+          title={film.title}
+          onClick={film.onClick}
+          onPlay={this.handleClick}
+        />)
+    );
+  }
+}
 
 FilmList.propTypes = {
-  title: PropTypes.string,
-  link: PropTypes.string,
-  src: PropTypes.string,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    link: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })),
   onClick: PropTypes.func,
-  onPlay: PropTypes.func
+  onPlay: PropTypes.bool
 };
 
 export default FilmList;
-
-
