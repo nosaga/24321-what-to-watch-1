@@ -1,7 +1,7 @@
 import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Card from "./card.jsx";
+import FilmList from "./film-list.jsx";
 
 const mock = {
   films: [
@@ -13,18 +13,18 @@ const mock = {
   ]
 };
 Enzyme.configure({adapter: new Adapter()});
-describe(`FilmCardComponent`, () => {
-  it(`Click on title calls callback function`, () => {
+describe(`FilmListComponent`, () => {
+  it(`Click on play button calls callback function`, () => {
     const {films} = mock;
     const clickHandler = jest.fn();
-    const app = shallow(<Card
+    const app = shallow(<FilmList
       onClick={clickHandler}
       onPlay={clickHandler}
       films={films}
     />);
 
-    const titleLink = app.find(`.small-movie-card__link`);
-    titleLink.simulate(`click`);
-    expect(clickHandler).toHaveBeenCalledTimes(1);
+    const button = app.find(`button`);
+    button.simulate(`click`);
+    app.update();
   });
 });

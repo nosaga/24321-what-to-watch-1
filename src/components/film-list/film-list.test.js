@@ -1,11 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import FilmCard from "./film-card.jsx";
+import FilmList from "./film-list.jsx";
 
 it(`FilmCard renders correctly`, () => {
   const tree = renderer
-    .create(<FilmCard
-      onClick = {jest.fn()}
+    .create(<FilmList
     />)
     .toJSON();
 

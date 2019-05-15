@@ -200,7 +200,7 @@ exports[`MainScreen renders correctly 1`] = `
           <h2
             className="movie-card__title"
           >
-            
+            Fantastic Beasts: The Crimes of Grindelwald
           </h2>
           <p
             className="movie-card__meta"
@@ -389,9 +389,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="The Grand Budapest Hotel"
+              alt="Fantastic Beasts: The Crimes of Grindelwald"
               height="175"
-              src="img/bohemian-rhapsody.jpg"
+              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
               width="280"
             />
           </div>
@@ -402,7 +402,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              The Grand Budapest Hotel
+              Fantastic Beasts: The Crimes of Grindelwald
             </a>
           </h3>
         </article>
@@ -419,7 +419,7 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="The Grand Budapest Hotel"
+              alt="Bohemian Rhapsody"
               height="175"
               src="img/bohemian-rhapsody.jpg"
               width="280"
@@ -432,7 +432,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              The Grand Budapest Hotel
+              Bohemian Rhapsody
             </a>
           </h3>
         </article>
@@ -449,9 +449,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="The Grand Budapest Hotel"
+              alt="Macbeth"
               height="175"
-              src="img/bohemian-rhapsody.jpg"
+              src="img/macbeth.jpg"
               width="280"
             />
           </div>
@@ -462,7 +462,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              The Grand Budapest Hotel
+              Macbeth
             </a>
           </h3>
         </article>
@@ -479,9 +479,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="The Grand Budapest Hotel"
+              alt="Aviator"
               height="175"
-              src="img/bohemian-rhapsody.jpg"
+              src="img/aviator.jpg"
               width="280"
             />
           </div>
@@ -492,7 +492,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              The Grand Budapest Hotel
+              Aviator
             </a>
           </h3>
         </article>
@@ -509,9 +509,9 @@ exports[`MainScreen renders correctly 1`] = `
             className="small-movie-card__image"
           >
             <img
-              alt="The Grand Budapest Hotel"
+              alt="What We Do in the Shadows"
               height="175"
-              src="img/bohemian-rhapsody.jpg"
+              src="img/what-we-do-in-the-shadows.jpg"
               width="280"
             />
           </div>
@@ -522,457 +522,7 @@ exports[`MainScreen renders correctly 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <button
-            className="small-movie-card__play-btn"
-            type="button"
-          >
-            Play
-          </button>
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="The Grand Budapest Hotel"
-              height="175"
-              src="img/bohemian-rhapsody.jpg"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-            >
-              The Grand Budapest Hotel
+              What We Do in the Shadows
             </a>
           </h3>
         </article>
