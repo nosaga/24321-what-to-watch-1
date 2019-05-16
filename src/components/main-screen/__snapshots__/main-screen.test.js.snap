@@ -381,6 +381,7 @@ exports[`MainScreen renders correctly 1`] = `
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play
@@ -411,6 +412,7 @@ exports[`MainScreen renders correctly 1`] = `
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play
@@ -441,6 +443,7 @@ exports[`MainScreen renders correctly 1`] = `
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play
@@ -471,6 +474,7 @@ exports[`MainScreen renders correctly 1`] = `
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play
@@ -501,6 +505,7 @@ exports[`MainScreen renders correctly 1`] = `
         >
           <button
             className="small-movie-card__play-btn"
+            onClick={[Function]}
             type="button"
           >
             Play

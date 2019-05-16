@@ -13,10 +13,10 @@ const mock = {
 };
 
 it(`FilmList renders correctly`, () => {
-  const {film} = mock;
+  const {films} = mock;
   const tree = renderer
     .create(<FilmList
-      film = {film}
+      films = {films}
       onClick={jest.fn()}
       onPlay={true}
     />)
