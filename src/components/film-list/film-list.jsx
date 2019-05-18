@@ -8,6 +8,7 @@ class FilmList extends Component {
     this.state = {
       hover: false
     };
+    this.toggleHover = this.toggleHover.bind(this);
   }
 
   toggleHover() {
