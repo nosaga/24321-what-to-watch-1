@@ -5,13 +5,15 @@ import Card from "../card/card.jsx";
 class FilmList extends Component {
   constructor(props) {
     super(props);
-    this.state = {isActive: true};
+    this.state = {
+      hover: false
+    };
   }
 
-  handleClick() {
-    this.setState((state) => ({
-      isActive: !state.isActive
-    }));
+  toggleHover() {
+    this.setState({
+      hover: !this.state.hover
+    });
   }
 
   render() {
@@ -23,7 +25,7 @@ class FilmList extends Component {
           src={film.src}
           title={film.title}
           onClick={film.onClick}
-          onPlay={this.handleClick}
+          onPlay={this.toggleHover}
         />)
     );
   }
