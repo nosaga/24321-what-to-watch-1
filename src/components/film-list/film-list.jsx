@@ -26,7 +26,7 @@ class FilmList extends Component {
           src={film.src}
           title={film.title}
           onClick={film.onClick}
-          onPlay={this.toggleHover}
+          onPlay={film.onPlay}
         />)
     );
   }
