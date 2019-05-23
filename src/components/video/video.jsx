@@ -5,40 +5,26 @@ class VideoPlayer extends PureComponent {
   constructor(props) {
     super(props);
 
-    this._video = document.createElement(`video`);
+    this._videoRef = React.createRef();
     this.state = {
-      progress: this._video.currentTime,
-      muted: this._video.muted,
+      progress: this._videoRef.currentTime,
       isLoading: true,
-      isPlaying: false
+      isPlaying: false,
     };
-
-    this._video.oncanplaythrough = () => this.setState({
-      isLoading: false
-    });
-
-    this._video.onplay = () => {
-      this.setState({
-        isPlaying: true
-      });
-    };
-
-    this._video.onpause = () => this.setState({
-      isPlaying: false
-    });
 
     this._onPlayButtonClick = this._onPlayButtonClick.bind(this);
   }
-
   render() {
     const {isLoading, isPlaying} = this.state;
     const {src, title, link} = this.props;
 
     return (
       <div>
-        <button className={`small-movie-card__${isPlaying ? `pause` : `play`}-btn`} type="button" onClick={this._onPlayButtonClick}>{isPlaying ? `Pause` : `Play`}</button>
+        <button className={`small-movie-card__${isPlaying ? `pause` : `play`}-btn`}
+          type="button" disabled={isLoading}
+          onClick={this._onPlayButtonClick}>{isPlaying ? `Pause` : `Play`}</button>
         <div className="small-movie-card__image">
-          <video width="280" height="175" alt={title} controls poster={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`} >
+          <video ref={this._videoRef} width="280" height="175" alt={title} controls muted poster={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`} >
             <source src={link} type="video/mp4"></source>
           </video>
         </div>
@@ -46,33 +32,55 @@ class VideoPlayer extends PureComponent {
     );
   }
 
-  componentDidUpdate() {
-    if (this.state.isPlaying) {
-      this._video.play();
-    } else {
-      this._video.pause();
-    }
+  componentDidMount() {
+    const {link} = this.props;
+    const video = this._videoRef.current;
+
+    video.link = link;
+
+    video.oncanplaythrough = () => this.setState({
+      isLoading: false
+    });
+
+    video.onplay = () => {
+      this.setState({
+        isPlaying: true
+      });
+    };
+
+    video.onpause = () => this.setState({
+      isPlaying: false
+    });
   }
 
-  // _onPlayButtonClick() {
-  //   this.setState((state) => ({
-  //     isPlaying: !state.isPlaying
-  //   }));
-  //   console.log(`I work`);
-  // }
+  componentWillUnmount() {
+    const video = this._videoRef.current;
+
+    video.oncanplaythrough = null;
+    video.onplay = null;
+    video.onpause = null;
+    video.ontimeupdate = null;
+    video.link = ``;
+  }
 
   _onPlayButtonClick() {
-    this.setState({isPlaying: !this.state.isPlaying});
-    console.log(`I work`);
+    this.setState({isPlaying: !this.state.isPlaying}, () => {
+      const video = this._videoRef.current;
+      if (this.state.isPlaying) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
   }
 }
 
-
 VideoPlayer.propTypes = {
-  onClick: PropTypes.func,
-  onPlay: PropTypes.func,
+  onPlayButtonClick: PropTypes.func,
+  isPlaying: PropTypes.bool,
+  link: PropTypes.string.isRequired,
   src: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default VideoPlayer;
