@@ -4,14 +4,12 @@ import PropTypes from "prop-types";
 class VideoPlayer extends PureComponent {
   constructor(props) {
     super(props);
-
     this._videoRef = React.createRef();
     this.state = {
       progress: this._videoRef.currentTime,
       isLoading: true,
       isPlaying: false,
     };
-
     this._onPlayButtonClick = this._onPlayButtonClick.bind(this);
   }
   render() {
