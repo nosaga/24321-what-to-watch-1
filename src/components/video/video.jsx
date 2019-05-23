@@ -5,27 +5,28 @@ class VideoPlayer extends PureComponent {
   constructor(props) {
     super(props);
 
-    this._video = document.createElement(`video`);
+    // this._video = document.createElement(`video`);
+    this._video = React.createRef();
     this.state = {
       progress: this._video.currentTime,
       muted: this._video.muted,
       isLoading: true,
-      isPlaying: false
+      isPlaying: false,
     };
 
-    this._video.oncanplaythrough = () => this.setState({
-      isLoading: false
-    });
+    // this._video.oncanplaythrough = () => this.setState({
+    //   isLoading: false
+    // });
 
-    this._video.onplay = () => {
-      this.setState({
-        isPlaying: true
-      });
-    };
+    // this._video.onplay = () => {
+    //   this.setState({
+    //     isPlaying: true
+    //   });
+    // };
 
-    this._video.onpause = () => this.setState({
-      isPlaying: false
-    });
+    // this._video.onpause = () => this.setState({
+    //   isPlaying: false
+    // });
 
     this._onPlayButtonClick = this._onPlayButtonClick.bind(this);
   }
@@ -36,10 +37,23 @@ class VideoPlayer extends PureComponent {
 
     return (
       <div>
-        <button className={`small-movie-card__${isPlaying ? `pause` : `play`}-btn`} type="button" onClick={this._onPlayButtonClick}>{isPlaying ? `Pause` : `Play`}</button>
+        <button
+          className={`small-movie-card__${isPlaying ? `pause` : `play`}-btn`}
+          type="button"
+          onClick={this._onPlayButtonClick}
+        >
+          {isPlaying ? `Pause` : `Play`}
+        </button>
         <div className="small-movie-card__image">
-          <video width="280" height="175" alt={title} controls poster={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`} >
-            <source src={link} type="video/mp4"></source>
+          <video
+            ref={(c) => (this._video = c)}
+            width="280"
+            height="175"
+            alt={title}
+            controls
+            poster={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`}
+          >
+            <source src={link} type="video/mp4" />
           </video>
         </div>
       </div>
@@ -53,26 +67,19 @@ class VideoPlayer extends PureComponent {
       this._video.pause();
     }
   }
-
-  // _onPlayButtonClick() {
-  //   this.setState((state) => ({
-  //     isPlaying: !state.isPlaying
-  //   }));
-  //   console.log(`I work`);
-  // }
-
   _onPlayButtonClick() {
-    this.setState({isPlaying: !this.state.isPlaying});
+    this.setState({isPlaying: !this.state.isPlaying}, () => {
+      return this.state.isPlaying ? this._video.play() : this._video.pause();
+    });
     console.log(`I work`);
   }
 }
-
 
 VideoPlayer.propTypes = {
   onClick: PropTypes.func,
   onPlay: PropTypes.func,
   src: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default VideoPlayer;

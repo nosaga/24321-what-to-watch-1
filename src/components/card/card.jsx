@@ -5,7 +5,7 @@ import VideoPlayer from "../video/video.jsx";
 const Card = ({onClick, onPlay, link, src, title}) => {
   return (
     <article className="small-movie-card catalog__movies-card">
-      <VideoPlayer link={link} src={src} title={title} onPlay={onPlay}
+      <VideoPlayer link={link} src={src} title={title}
       />
       <h3 className="small-movie-card__title">
         <a className="small-movie-card__link" onClick={onClick} href={link}>{title}</a>
