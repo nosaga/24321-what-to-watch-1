@@ -9,11 +9,12 @@ class VideoPlayer extends PureComponent {
       progress: this._videoRef.currentTime,
       isLoading: true,
       isPlaying: false,
+      isPlayingOnHover: false,
     };
     this._onPlayButtonClick = this._onPlayButtonClick.bind(this);
   }
   render() {
-    const {isLoading, isPlaying} = this.state;
+    const {isLoading, isPlaying, isPlayingOnHover} = this.state;
     const {src, title, link} = this.props;
 
     return (
@@ -22,13 +23,31 @@ class VideoPlayer extends PureComponent {
           type="button" disabled={isLoading}
           onClick={this._onPlayButtonClick}>{isPlaying ? `Pause` : `Play`}</button>
         <div className="small-movie-card__image">
-          <video ref={this._videoRef} width="280" height="175" alt={title} controls muted poster={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`} >
+          <video ref={this._videoRef} width="280" height="175" alt={title} muted poster={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`} >
             <source src={link} type="video/mp4"></source>
           </video>
         </div>
       </div>
     );
   }
+
+  componentDidUpdate() {
+    const { playOnHover } = this.props; // достаем состояние ховера
+    const { isPlayingOnHover, isPlaying } = this.state;
+
+    if (playOnHover && !isPlaying) {
+      this._videoRef.current.play();
+      this.setState({ isPlayingOnHover: true })
+    }
+
+    if (!playOnHover && isPlayingOnHover) {
+      this._videoRef.current.pause();
+      this._videoRef.current.currentTime = 0;
+      this._videoRef.current.load();
+      this.setState({ isPlayingOnHover: false, isPlaying: false });
+    }
+  }
+
 
   componentDidMount() {
     const {link} = this.props;

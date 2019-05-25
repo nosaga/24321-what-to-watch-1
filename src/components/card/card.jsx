@@ -16,36 +16,40 @@ class Card extends React.PureComponent {
   _toggleHover() {
     this.playDelay = setTimeout(() => {
       this.setState({
-        hover: !this.state.hover
+        hover: true,
       });
     }, 1000);
   }
   _untoggleHover() {
     clearTimeout(this.playDelay);
     this.setState({
-      hover: this.state.hover
+      hover: false,
     });
   }
 
   render() {
-    const {
-      onClick,
-      onPlay,
-      link,
-      src,
-      title
-    } = this.props;
+    const {onClick, onPlay, link, src, title} = this.props;
 
     const {hover} = this.state;
 
     return (
-      <article className="small-movie-card catalog__movies-card" onMouseEnter={this._toggleHover} onMouseLeave={this._untoggleHover}>
-        {
-          hover ? <VideoPlayer link={link} src={src} title={title} onPlay={onPlay}
-          /> : <img src = {src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`}/>
-        }
+      <article
+        className="small-movie-card catalog__movies-card"
+        onMouseEnter={this._toggleHover}
+        onMouseLeave={this._untoggleHover}
+      >
+        <VideoPlayer
+          link={link}
+          src={src}
+          title={title}
+          onPlay={onPlay}
+          playOnHover={hover}
+          poster={<img src={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`} />}
+        />
         <h3 className="small-movie-card__title">
-          <a className="small-movie-card__link" onClick={onClick} href={link}>{title}</a>
+          <a className="small-movie-card__link" onClick={onClick} href={link}>
+            {title}
+          </a>
         </h3>
       </article>
     );
@@ -57,7 +61,7 @@ Card.propTypes = {
   onPlay: PropTypes.func,
   link: PropTypes.string,
   src: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default Card;
