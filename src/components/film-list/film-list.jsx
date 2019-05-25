@@ -11,8 +11,8 @@ class FilmList extends Component {
           link={film.link}
           src={film.src}
           title={film.title}
-          onClick={film.onClick}
-          onPlay={film.onPlay}
+
+
         />)
     );
   }

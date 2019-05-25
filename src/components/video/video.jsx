@@ -9,8 +9,11 @@ class VideoPlayer extends PureComponent {
       progress: this._videoRef.currentTime,
       isLoading: true,
       isPlaying: false,
+      hover: false
     };
-    this._onPlayButtonClick = this._onPlayButtonClick.bind(this);
+
+    this._onHoverON = this._onHoverON.bind(this);
+    this._onHoverOFF = this._onHoverOFF.bind(this);
   }
   render() {
     const {isLoading, isPlaying} = this.state;
@@ -18,9 +21,9 @@ class VideoPlayer extends PureComponent {
 
     return (
       <div>
-        <button className={`small-movie-card__${isPlaying ? `pause` : `play`}-btn`}
-          type="button" disabled={isLoading}
-          onClick={this._onPlayButtonClick}>{isPlaying ? `Pause` : `Play`}</button>
+        <button className={`small-movie-card__${isPlaying ? `` : `play`}-btn`}
+                type="button" disabled={isLoading}
+                onMouseEnter={this._onHoverON} onMouseLeave={this._onHoverOFF}>{isPlaying ? `Pause` : `Play`}</button>
         <div className="small-movie-card__image">
           <video ref={this._videoRef} width="280" height="175" alt={title} controls muted poster={src ? src : `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`} >
             <source src={link} type="video/mp4"></source>
@@ -61,20 +64,41 @@ class VideoPlayer extends PureComponent {
     video.link = ``;
   }
 
-  _onPlayButtonClick() {
-    this.setState({isPlaying: !this.state.isPlaying}, () => {
-      const video = this._videoRef.current;
-      if (this.state.isPlaying) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
+  componentDidUpdate() {
+    const video = this._videoRef.current;
+    if (this.props.isPlaying) {
+      video.play();
+    } else {
+      video.pause();
+    }
   }
+
+  _onHoverON() {
+    this.playDelay = setTimeout(() => {
+      this.setState({
+        isPlaying: !this.state.isPlaying,
+        hover: !this.state.hover
+      }, () => {
+        const video = this._videoRef.current;
+        video.play();
+      });
+      console.log(this.state.hover);
+    }, 1000);
+  }
+
+  _onHoverOFF() {
+    clearTimeout(this.playDelay);
+//     this.setState({
+//       hover: this.state.hover
+//     });
+    console.log(this.state.hover);
+    console.log('I work');
+  }
+
 }
 
 VideoPlayer.propTypes = {
-  onPlayButtonClick: PropTypes.func,
+  onHoverON: PropTypes.func,
   isPlaying: PropTypes.bool,
   link: PropTypes.string.isRequired,
   src: PropTypes.string,
@@ -82,3 +106,5 @@ VideoPlayer.propTypes = {
 };
 
 export default VideoPlayer;
+
+

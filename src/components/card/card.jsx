@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import VideoPlayer from "../video/video.jsx";
 
+
 class Card extends React.PureComponent {
   constructor(props) {
     super(props);
