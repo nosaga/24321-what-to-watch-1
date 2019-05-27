@@ -3,20 +3,6 @@ import PropTypes from "prop-types";
 import Card from "../card/card.jsx";
 
 class FilmList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false
-    };
-    this.toggleHover = this.toggleHover.bind(this);
-  }
-
-  toggleHover() {
-    this.setState({
-      hover: !this.state.hover
-    });
-  }
-
   render() {
     const {films} = this.props;
     return (
@@ -25,8 +11,8 @@ class FilmList extends Component {
           link={film.link}
           src={film.src}
           title={film.title}
-          onClick={film.onClick}
-          onPlay={this.toggleHover}
+
+
         />)
     );
   }

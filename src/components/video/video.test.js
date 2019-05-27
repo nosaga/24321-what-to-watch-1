@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Card from "./card.jsx";
+import VideoPlayer from "./video.jsx";
 
 const mock = {
   link: ``,
@@ -15,12 +15,11 @@ it(`Card renders correctly`, () => {
     title,
   } = mock;
   const tree = renderer
-    .create(<Card
+    .create(<VideoPlayer
       link={link}
       src={src}
       title={title}
-      playOnHover={false}
-      onPlay={jest.fn()}
+      onClick={jest.fn()}
     />)
     .toJSON();
 

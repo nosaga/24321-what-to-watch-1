@@ -14,30 +14,18 @@ const mock = {
 };
 Enzyme.configure({adapter: new Adapter()});
 describe(`FilmCardComponent`, () => {
-  it(`Click on title calls callback function`, () => {
+  it(`Hover calls callback function`, () => {
     const {films} = mock;
-    const clickHandler = jest.fn();
+    const hoverOnHandler = jest.fn();
+    const hoverOffHandler = jest.fn();
     const app = shallow(<Card
       films={films}
-      onClick={clickHandler}
-      onPlay={clickHandler}
+      onMouseEnter={hoverOnHandler}
+      onMouseLeave={hoverOffHandler}
     />);
 
-    const titleLink = app.find(`.small-movie-card__link`);
-    titleLink.simulate(`click`);
-    expect(clickHandler).toHaveBeenCalledTimes(1);
-  });
-  it(`Play button calls callback function`, () => {
-    const {films} = mock;
-    const clickHandler = jest.fn();
-    const app = shallow(<Card
-      films={films}
-      onClick={clickHandler}
-      onPlay={clickHandler}
-    />);
-
-    const button = app.find(`button`);
-    button.simulate(`click`);
+    const article = app.find(`article`);
+    article.simulate(`hover`);
     app.update();
   });
 });
