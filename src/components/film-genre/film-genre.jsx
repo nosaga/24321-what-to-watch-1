@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 const FilmGenre = ({onClick}) => {
   return (
     <ul className="catalog__genres-list">
+      <li className="catalog__genres-item catalog__genres-item--active">
+        <a href="#" className="catalog__genres-link" onClick={onClick}>All genres</a>
+      </li>
       {(films.map((film) => film.genre)
         .reduce((unique, item) =>unique.includes(item) ? unique : [...unique, item], []).map((film, i) =>
           <li className="catalog__genres-item catalog__genres-item--active" key={i}>

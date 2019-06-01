@@ -11,7 +11,7 @@ class MainScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      genre: `All films`
+      genre: `All genres`
     };
     this._handleClick = this._handleClick.bind(this);
   }
@@ -20,10 +20,6 @@ class MainScreen extends Component {
     e.preventDefault();
     let clickedGenre = e.target.innerHTML;
     this.setState({genre: clickedGenre});
-  }
-
-  _handleUnclick() {
-    this.setState({genre: `All films`});
   }
 
   render() {
@@ -110,9 +106,12 @@ class MainScreen extends Component {
             <FilmGenre onClick={this._handleClick}/>
 
             <div className="catalog__movies-list">
-              <FilmList
-                genre={console.log(genre)}
-                films={films}/>
+              { genre === `All genres` ? <FilmList
+                genre={genre}
+                films={films}/> : <FilmList
+                genre={genre}
+                films={films.filter((film) => film.genre === genre)}/>
+              }
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
