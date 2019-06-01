@@ -29,13 +29,14 @@ class Card extends React.PureComponent {
   }
 
   render() {
-    const {onPlay, link, src, title} = this.props;
+    const {onPlay, link, src, title, genre} = this.props;
 
     const {hover} = this.state;
 
     return (
       <article
         className="small-movie-card catalog__movies-card"
+        genre={genre}
         onMouseEnter={this._toggleHover}
         onMouseLeave={this._untoggleHover}
       >
@@ -64,6 +65,7 @@ Card.propTypes = {
   onMouseLeave: PropTypes.bool,
   link: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
+  genre: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
 
