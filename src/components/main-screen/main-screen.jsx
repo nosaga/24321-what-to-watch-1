@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import FilmGenre from "../film-genre/film-genre.jsx";
 import FilmList from "../film-list/film-list.jsx";
 import films from "../../mocks/films.js";
-//import connect from "react-redux";
+import {connect} from "react-redux";
 //import {ActionCreators} from "../../reducer";
 
 
@@ -104,14 +104,10 @@ class MainScreen extends Component {
             <h2 className="catalog__title visually-hidden">Catalog</h2>
 
             <FilmGenre onClick={this._handleClick}/>
-
             <div className="catalog__movies-list">
-              { genre === `All genres` ? <FilmList
+                <FilmList
                 genre={genre}
-                films={films}/> : <FilmList
-                genre={genre}
-                films={films.filter((film) => film.genre === genre)}/>
-              }
+                films={genre === `All genres` ? films : films.filter((film) => film.genre === genre)}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
