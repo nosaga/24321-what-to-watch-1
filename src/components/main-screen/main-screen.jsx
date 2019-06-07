@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import FilmGenre from "../film-genre/film-genre.jsx";
 import FilmList from "../film-list/film-list.jsx";
-import films from "../../mocks/films.js"
+import films from "../../mocks/films.js";
 
 import {connect} from 'react-redux';
 import {changeGenre} from '../../reducer';
@@ -104,7 +104,7 @@ class MainScreen extends Component {
 
             <FilmGenre onClick={this._handleClick}/>
             <div className="catalog__movies-list">
-                <FilmList
+              <FilmList
                 genre={genre}
                 films={genre === `All genres` ? films : films.filter((film) => film.genre === genre)}/>
             </div>
@@ -135,7 +135,9 @@ class MainScreen extends Component {
 MainScreen.propTypes = {
   onClick: PropTypes.func,
   title: PropTypes.string,
-  src: PropTypes.string
+  src: PropTypes.string,
+  genre: PropTypes.string,
+  changeGenre: PropTypes.func
 };
 
 const mapStateToProps = (state) => ({
