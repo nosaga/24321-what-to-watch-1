@@ -1,22 +1,19 @@
-import films from "mocks/films";
-
 const initialState = {
   genre: `All genres`,
-  films: films
 };
 
-({
+export const changeGenre = (genre) => ({
   type: `CHANGE_GENRE`,
-  payload: {genre: `comedies`}
-})
+  payload: genre
+});
 
 
-const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case `CHANGE_GENRE` : return Object.assign({}, state, {
-      step: state.step + action.payload
-    });
+    case `CHANGE_GENRE` :
+      return Object.assign({}, state, {
+        genre: action.payload
+      });
   }
   return state;
-}
-
+};

@@ -1,29 +1,28 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+
 import FilmGenre from "../film-genre/film-genre.jsx";
 import FilmList from "../film-list/film-list.jsx";
-import films from "../../mocks/films.js";
-import {connect} from "react-redux";
-//import {ActionCreators} from "../../reducer";
+import films from "../../mocks/films.js"
+
+import {connect} from 'react-redux';
+import {changeGenre} from '../../reducer';
 
 
 class MainScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      genre: `All genres`
-    };
     this._handleClick = this._handleClick.bind(this);
   }
 
   _handleClick(e) {
     e.preventDefault();
     let clickedGenre = e.target.innerHTML;
-    this.setState({genre: clickedGenre});
+    this.props.changeGenre(clickedGenre);
   }
 
   render() {
-    const genre = this.state.genre;
+    const {genre} = this.props;
     return (
       <div>
         <div className="visually-hidden">
@@ -139,17 +138,12 @@ MainScreen.propTypes = {
   src: PropTypes.string
 };
 
-// const mapStateProps = (state, ownProps) => Object.assign({}, ownProps, {
-//   genre: state.genre,
-//   filmList: state.filmList
-// });
-//
-// const mapDispatchToProps = (dispatch) => ({
-//   onUserSelect: () => dispatch({
-//     type: `CHANGE_GENRE`,
-//     payload: 1
-//   })
-// })
+const mapStateToProps = (state) => ({
+  genre: state.genre,
+});
 
-export default MainScreen;
-//export default connect(mapStateProps, mapDispatchToProps)(MainScreen);
+const mapDispatchToProps = (dispatch) => ({
+  changeGenre: (genre) => dispatch(changeGenre(genre)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainScreen);
