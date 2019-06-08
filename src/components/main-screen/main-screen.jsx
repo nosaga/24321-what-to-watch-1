@@ -13,14 +13,14 @@ class MainScreen extends Component {
     this.state = {
       genre: `All genres`
     };
-    this._handleClick = this._handleClick.bind(this);
+    //this._handleClick = this._handleClick.bind(this);
   }
 
-  _handleClick(e) {
-    e.preventDefault();
-    let clickedGenre = e.target.innerHTML;
-    this.setState({genre: clickedGenre});
-  }
+  // _handleClick(e) {
+  //   e.preventDefault();
+  //   let clickedGenre = e.target.innerHTML;
+  //   this.setState({genre: clickedGenre});
+  // }
 
   render() {
     const genre = this.state.genre;
@@ -106,8 +106,8 @@ class MainScreen extends Component {
             <FilmGenre onClick={this._handleClick}/>
             <div className="catalog__movies-list">
                 <FilmList
-                genre={genre}
-                films={genre === `All genres` ? films : films.filter((film) => film.genre === genre)}/>
+                genre={this.genre}
+                films={this.genre === `All genres` ? films : films.filter((film) => film.this.genre === genre)}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
@@ -139,17 +139,15 @@ MainScreen.propTypes = {
   src: PropTypes.string
 };
 
-// const mapStateProps = (state, ownProps) => Object.assign({}, ownProps, {
-//   genre: state.genre,
-//   filmList: state.filmList
-// });
-//
-// const mapDispatchToProps = (dispatch) => ({
-//   onUserSelect: () => dispatch({
-//     type: `CHANGE_GENRE`,
-//     payload: 1
-//   })
-// })
+const mapStateToProps = (state) => {
+  return {genre: state.genre};
+};
 
-export default MainScreen;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    _handleClick: () => dispatch({type: `GENRE_CLICKED`, value: films})
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainScreen);
 //export default connect(mapStateProps, mapDispatchToProps)(MainScreen);
