@@ -48,24 +48,23 @@ class VideoPlayer extends PureComponent {
 
 
   componentDidMount() {
-    const {link} = this.props;
     const video = this._videoRef.current;
 
-    video.link = link;
-
-    video.oncanplaythrough = () => this.setState({
-      isLoading: false
-    });
-
-    video.onplay = () => {
-      this.setState({
-        isPlaying: true
+    if (video) {
+      video.oncanplaythrough = () => this.setState({
+        isLoading: false
       });
-    };
 
-    video.onpause = () => this.setState({
-      isPlaying: false
-    });
+      video.onplay = () => {
+        this.setState({
+          isPlaying: true
+        });
+      };
+
+      video.onpause = () => this.setState({
+        isPlaying: false
+      });
+    }
   }
 
   componentWillUnmount() {

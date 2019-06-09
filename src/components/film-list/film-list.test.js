@@ -8,6 +8,7 @@ const mock = {
       link: `movie-page.html`,
       src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
       title: `Fantastic Beasts: The Crimes of Grindelwald`,
+      genre: `family`,
     }
   ]
 };

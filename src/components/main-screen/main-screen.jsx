@@ -3,27 +3,24 @@ import PropTypes from "prop-types";
 import FilmGenre from "../film-genre/film-genre.jsx";
 import FilmList from "../film-list/film-list.jsx";
 import films from "../../mocks/films.js";
-import {connect} from "react-redux";
-//import {ActionCreators} from "../../reducer";
+import {connect} from 'react-redux';
+import {changeGenre} from '../../reducer';
 
 
 class MainScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      genre: `All genres`
-    };
-    //this._handleClick = this._handleClick.bind(this);
+    this._handleClick = this._handleClick.bind(this);
   }
 
-  // _handleClick(e) {
-  //   e.preventDefault();
-  //   let clickedGenre = e.target.innerHTML;
-  //   this.setState({genre: clickedGenre});
-  // }
+  _handleClick(e) {
+    e.preventDefault();
+    let clickedGenre = e.target.innerHTML;
+    this.props.changeGenre(clickedGenre);
+  }
 
   render() {
-    const genre = this.state.genre;
+    const {genre} = this.props;
     return (
       <div>
         <div className="visually-hidden">
@@ -105,9 +102,9 @@ class MainScreen extends Component {
 
             <FilmGenre onClick={this._handleClick}/>
             <div className="catalog__movies-list">
-                <FilmList
-                genre={this.genre}
-                films={this.genre === `All genres` ? films : films.filter((film) => film.this.genre === genre)}/>
+              <FilmList
+                genre={genre}
+                films={genre === `All genres` ? films : films.filter((film) => film.genre === genre)}/>
             </div>
             <div className="catalog__more">
               <button className="catalog__button" type="button">Show more</button>
@@ -136,18 +133,17 @@ class MainScreen extends Component {
 MainScreen.propTypes = {
   onClick: PropTypes.func,
   title: PropTypes.string,
-  src: PropTypes.string
+  src: PropTypes.string,
+  genre: PropTypes.string.isRequired,
+  changeGenre: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state) => {
-  return {genre: state.genre};
-};
+const mapStateToProps = (state) => ({
+  genre: state.genre,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    _handleClick: () => dispatch({type: `GENRE_CLICKED`, value: films})
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  changeGenre: (genre) => dispatch(changeGenre(genre)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainScreen);
-//export default connect(mapStateProps, mapDispatchToProps)(MainScreen);

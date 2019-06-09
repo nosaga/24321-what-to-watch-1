@@ -60,13 +60,13 @@ class Card extends React.PureComponent {
 
 Card.propTypes = {
   onPlay: PropTypes.func,
-  playOnHover: PropTypes.func,
-  onMouseEnter: PropTypes.bool,
-  onMouseLeave: PropTypes.bool,
-  link: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  playOnHover: PropTypes.bool,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  link: PropTypes.string,
+  src: PropTypes.string,
+  genre: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Card;

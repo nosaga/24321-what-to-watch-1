@@ -22,6 +22,7 @@ FilmList.propTypes = {
     link: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired
   })),
   onClick: PropTypes.func,
   onPlay: PropTypes.bool
